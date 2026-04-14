@@ -1,56 +1,125 @@
-CTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aman Tomar | Web Developer</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <title>Aman Tomar | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f172a;--card:#1e293b;--text:#fff;--muted:#cbd5f5;--primary:#38bdf8;--header:#111827;
+    }
+    .light{
+      --bg:#f8fafc;--card:#ffffff;--text:#0f172a;--muted:#475569;--primary:#0ea5e9;--header:#e2e8f0;
+    }
+    *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;scroll-behavior:smooth}
+    body{background:var(--bg);color:var(--text)}
+    header{display:flex;justify-content:space-between;align-items:center;padding:20px 10%;background:var(--header);position:sticky;top:0;z-index:1000}
+    header h2{color:var(--primary)}
+    nav a{margin:0 15px;color:var(--text);text-decoration:none;position:relative}
+    nav a::after{content:'';position:absolute;bottom:-5px;left:0;width:0;height:2px;background:var(--primary);transition:0.3s}
+    nav a:hover::after{width:100%}section{padding:70px 10%}
+h2{margin-bottom:20px}
 
-<header>
-  <h2 class="logo">Aman</h2>
+.hero{text-align:center}
+.hero img{width:140px;border-radius:50%;border:4px solid var(--primary);margin-bottom:15px}
+.hero h1{font-size:42px}
+.hero span{color:var(--primary)}
+.hero p{margin:15px 0;color:var(--muted)}
+.btn{display:inline-block;margin:10px;padding:10px 22px;background:var(--primary);color:#000;border-radius:25px;text-decoration:none;font-weight:600}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.card{background:var(--card);padding:20px;border-radius:15px;transition:0.3s}
+.card:hover{transform:translateY(-6px)}
+.projects img{width:100%;border-radius:10px;margin-bottom:10px}
+.project-links a{margin-right:10px;font-size:14px;color:var(--primary)}
+
+.contact input,.contact textarea{width:100%;padding:10px;margin:10px 0;border:none;border-radius:8px}
+.contact button{padding:10px 20px;border:none;background:var(--primary);color:#000;border-radius:20px;font-weight:600}
+
+footer{text-align:center;padding:20px;background:var(--header)}
+
+.whatsapp{position:fixed;bottom:20px;right:20px;background:#25D366;color:#fff;padding:12px 18px;border-radius:30px;text-decoration:none}
+.toggle{cursor:pointer;border:1px solid var(--primary);padding:5px 10px;border-radius:20px}
+
+  </style>
+</head>
+<body><header>
+  <h2>Aman</h2>
   <nav>
+    <a href="#">Home</a>
     <a href="#about">About</a>
     <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
   </nav>
-</header>
-
-<section class="hero">
-  <img src="profile.jpg" class="profile-img">
+  <div class="toggle" onclick="toggleTheme()">🌙</div>
+</header><section class="hero">
+  <img src="https://via.placeholder.com/150" alt="profile">
   <h1>Hi, I'm <span>Aman Tomar</span></h1>
-  <h3>Frontend Web Developer | Business Website Specialist</h3>
-  <p>I help local businesses grow online with modern and responsive websites.</p>
-  <a href="https://wa.me/91XXXXXXXXXX" target="_blank" class="btn">Hire Me</a>
-</section>
-
-<section id="about" class="about">
+  <p>Frontend Developer who builds high-converting business websites 🚀</p>
+  <a href="#projects" class="btn">View Work</a>
+  <a href="#contact" class="btn">Hire Me</a>
+</section><section id="about">
   <h2>About Me</h2>
-  <p>I am a passionate self-taught web developer focused on building fast, mobile-friendly and modern websites. My goal is to help businesses build strong online presence and generate more leads.</p>
-</section>
-
-<section id="projects" class="projects">
-  <h2>My Projects</h2>
-
-  <div class="project-card">
-    <img src="gym.jpg" class="project-img">
-    <h3>Gym Website</h3>
-    <p>Modern responsive fitness website design.</p>
+  <p>I build fast, mobile-friendly and modern websites that help businesses grow online.</p>
+  <a href="#" class="btn">Download Resume</a>
+</section><section>
+  <h2>Skills</h2>
+  <div class="grid">
+    <div class="card">HTML</div>
+    <div class="card">CSS</div>
+    <div class="card">JavaScript</div>
+    <div class="card">Bootstrap / Tailwind</div>
   </div>
-
-  <div class="project-card">
-    <img src="business.jpg" class="project-img">
-    <h3>Business Landing Page</h3>
-    <p>Clean and professional company website.</p>
+</section><section id="projects">
+  <h2>Projects</h2>
+  <div class="grid projects">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1554284126-aa88f22d8b74" alt="">
+      <h3>Gym Website</h3>
+      <p>Responsive fitness website</p>
+      <div class="project-links">
+        <a href="#">Live Demo</a>
+        <a href="#">GitHub</a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1551434678-e076c223a692" alt="">
+      <h3>Business Website</h3>
+      <p>Modern landing page</p>
+      <div class="project-links">
+        <a href="#">Live Demo</a>
+        <a href="#">GitHub</a>
+      </div>
+    </div>
   </div>
-
-</section>
-
-<section id="contact" class="contact">
+</section><section>
+  <h2>Services</h2>
+  <div class="grid">
+    <div class="card">Website Design</div>
+    <div class="card">Landing Pages</div>
+    <div class="card">Business Websites</div>
+  </div>
+</section><section>
+  <h2>Testimonials</h2>
+  <div class="grid">
+    <div class="card">"Great work, very professional"</div>
+    <div class="card">"Highly recommended developer"</div>
+  </div>
+</section><section id="contact" class="contact">
   <h2>Contact Me</h2>
-  <p>Email: amantomaratdelhi@gmail.com</p>
-  <p>Location: Faridabad(121101) </p>
-</section>
+  <form action="mailto:your@email.com" method="post" enctype="text/plain">
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea placeholder="Message" required></textarea>
+    <button type="submit">Send</button>
+  </form>
+</section><footer>
+  <p>© 2026 Aman Tomar | All Rights Reserved</p>
+</footer><a href="https://wa.me/91XXXXXXXXXX" class="whatsapp">WhatsApp</a>
 
-<a href="https://wa.
+<script>
+  function toggleTheme(){
+    document.body.classList.toggle('light');
+  }
+</script></body>
+</html>
